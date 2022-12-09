@@ -7,6 +7,7 @@ import logger from "morgan";
 // import todosRouter from routes/todos.js
 import todosRouter from "./routes/todos.js"
 
+const PORT=process.env.PORT
 //create app from express
 const app = express();
 
@@ -20,5 +21,5 @@ app.use(express.json());
 app.use("/todos",todosRouter);
 
 //export default app
-app.listen(3500,()=>{console.log("listening on port 3500")})
+app.listen(PORT,()=>{console.log(`listening on ${PORT}`)})
 export default app;
